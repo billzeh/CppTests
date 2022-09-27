@@ -19,6 +19,7 @@ add_library(${PROJECT_NAME} src/library.cpp)
 # 'Google_Tests_run' is the target name
 # 'test1.cpp tests2.cpp' are source files with tests
 add_executable(unitTests
+        test/ReturnCharStarTest.cpp
         test/LibraryTest.cpp
         test/UnionTest.cpp
         )
