@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.23)
 project(Tests)
 
 set(CMAKE_CXX_STANDARD 17)
+cmake_policy(SET CMP0135 NEW)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -22,5 +23,5 @@ add_executable(unitTests
         test/ReturnCharStarTest.cpp
         test/LibraryTest.cpp
         test/UnionTest.cpp
-        )
+    test/OptionalTest.cpp)
 target_link_libraries(unitTests ${PROJECT_NAME} gtest gtest_main)
